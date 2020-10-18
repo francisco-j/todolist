@@ -5,11 +5,11 @@ No hay requerimiento minimo ni maximo asi que aqui puedes volar tu imaginacion.
 ## DB Models:
 - Task:
     - description: string
-    - due_date: date
+    - dueDate: date
     - completed: boolean
     - name: string
 - User:
-    -name: string
+    - name: string
     - username: string
     - password: string
 
