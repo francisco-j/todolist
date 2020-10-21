@@ -25,6 +25,7 @@ router.get( '/', async ({query}, res) => {
         if(query.description) where.description = {[Op.iLike]: `%${query.description}%`}
         if(query.user) where.asignedUser = query.user
         if(query.dueDate) where.dueDate = query.dueDate
+        if(query.completed) where.completed = query.completed
     }
 
     try {
