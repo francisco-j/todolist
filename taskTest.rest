@@ -1,0 +1,35 @@
+### get all tasks
+GET http://localhost:5000/task
+
+### get task whit query
+GET http://localhost:5000/task?name=tarea
+
+### create new task
+POST http://localhost:5000/task
+Content-Type: application/json
+
+{
+    "name": "tarea segunda"
+}
+
+
+### delete task by id
+DELETE http://localhost:5000/task/2
+
+### update task by id
+PUT http://localhost:5000/task/3
+Content-Type: application/json
+
+{
+    "id": 5,
+    "name": "la segunda tarea"
+}
+
+### update task by id
+PATCH http://localhost:5000/task/3
+Content-Type: application/json
+
+{
+    "user": 5
+}
+
