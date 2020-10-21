@@ -1,0 +1,37 @@
+### get all tasks
+GET https://todolist-shockoe.herokuapp.com/tasks
+
+### get task whit query
+GET https://todolist-shockoe.herokuapp.com/tasks?name=tarea
+
+### create new task
+POST https://todolist-shockoe.herokuapp.com/tasks
+Content-Type: application/json
+
+{
+    "name": "tercera tarea",
+    "description": "esta es la decripcion de la tarea 3",
+    "completed": true
+}
+
+
+### delete task by id
+DELETE https://todolist-shockoe.herokuapp.com/tasks/2
+
+### update task by id
+PUT https://todolist-shockoe.herokuapp.com/tasks/3
+Content-Type: application/json
+
+{
+    "id": 5,
+    "name": "la segunda tarea"
+}
+
+### update task by id
+PATCH https://todolist-shockoe.herokuapp.com/tasks/3
+Content-Type: application/json
+
+{
+    "user": 5
+}
+
