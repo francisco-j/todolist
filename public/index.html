@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>todolist-API documentation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Documentación basica para API todo-list</h1>
+    <br>
+
+    <h2>Endpoints:</h2>
+    <ul>
+        <li>
+            <p><strong>Alta de tarea</strong></p>
+            <div>
+                <b>Endpoint:</b> POST: /tasks/ <br>
+                <b>payload:</b> {<br> <div class="indent">
+                    name: String, <br>
+                    description: String, <br>
+                    dueDate: Date, <br>
+                    completed: Bool, <br>
+                    asignedUSer: Integer <br>
+                </div>}
+            </div>
+        </li>
+        <li>
+            <p><strong>listado de tareas</strong></p>
+            <div>
+                <b>Endpoint:</b> GET: /tasks/ <br>
+                <b>optional queries:</b><br> <div class="indent">
+                    id: Integer <br>
+                    name: String <br>
+                    description: String <br>
+                    dueDate: Date <br>
+                    completed: Bool <br>
+                    asignedUSer: Integer <br>
+                </div>
+            </div>
+        </li>
+        <li>
+            <p><strong>Eliminar una tarea</strong></p>
+            <div>
+                <b>Endpoint:</b> DELETE: /tasks/:taskId <br>
+            </div>
+        </li>
+        <li>
+            <p><strong>Actualizar una tarea</strong></p>
+            <div>
+                <b>Endpoint:</b> PUT: /tasks/:taskId <br>
+                <b>payload:</b> {<br> <div class="indent">
+                    name: String, <br>
+                    description: String, <br>
+                    dueDate: Date, <br>
+                    completed: Bool, <br>
+                    asignedUSer: Integer <br>
+                </div>}
+            </div>
+        </li>
+        <li>
+            <p><strong>Asignar una tarea a un usuario</strong></p>
+            <div>
+                <b>Endpoint:</b> PATCH: /tasks/:taskId <br>
+                <b>payload:</b> {<br> <div class="indent">
+                    user: Integer <br>
+                </div>}
+            </div>
+        </li>
+      </ul>
+    
+</body>
+<style>
+    .indent {
+        margin-left: 20px;
+    }
+    p {
+        margin-top: 25px;
+        margin-bottom: 6px;
+    }
+</style>
+</html>
