@@ -1,31 +1,29 @@
-const { DataTypes } = require('sequelize')
-
 module.exports = {
-    up: queryInterface => queryInterface.createTable('Tasks', {
+    up: (queryInterface , Sequelize) => queryInterface.createTable('Tasks', {
       id: {
+        type: Sequelize.INTEGER,
         primaryKey: true,
-        type: DataTypes.INTEGER,
-        autoincrement: true
+        autoIncrement: true
       },
       name:  {
           allowNull: false,
-          type: DataTypes.STRING(30)
+          type: Sequelize.STRING
       },
-      description: DataTypes.STRING(50),
-      due_date: DataTypes.DATE,
+      description: Sequelize.STRING,
+      due_date: Sequelize.DATE,
       completed: {
           defaultValue: false,
-          type: DataTypes.BOOLEAN
+          type: Sequelize.BOOLEAN
       },
-      asigned_user: DataTypes.INTEGER,
+      asigned_user: Sequelize.INTEGER,
 
       created_at: {
           allowNull: false,
-          type: DataTypes.DATE
+          type: Sequelize.DATE
       },
       updated_at: {
           allowNull: true,
-          type: DataTypes.DATE
+          type: Sequelize.DATE
       }
     }),
     down: queryInterface => queryInterface.dropTable('Tasks')
