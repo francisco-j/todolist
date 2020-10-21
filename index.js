@@ -1,13 +1,12 @@
 require('dotenv').config()
 const express = require('express')
-//const bodyparser = require('body-parser')
+const { taskhRouter } = require('./routes')
+const bodyparser = require('body-parser')
 
 const app = express()
-//app.use(bodyparser.json())
+app.use(bodyparser.json())
 
-app.get('/test', (req, res)=>{
-    res.send({hi: 'index'})
-})
+app.use('/task', taskhRouter)
 
 //app.use(express.static('foo'))
 
